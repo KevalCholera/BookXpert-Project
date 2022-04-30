@@ -135,8 +135,8 @@ class CameraToPdfActivity : BaseActivity() {
             PERMISSION_CODE -> if (grantResults.isNotEmpty()) {
                 val readPermission = grantResults[0] == PackageManager.PERMISSION_GRANTED
                 val writePermission = grantResults[1] == PackageManager.PERMISSION_GRANTED
-                if (readPermission && writePermission)
-                    launchPdf()
+                if (readPermission && writePermission) {
+                }
                 else {
                     Toast.makeText(this, " Permission Denied", Toast.LENGTH_SHORT).show()
                 }
