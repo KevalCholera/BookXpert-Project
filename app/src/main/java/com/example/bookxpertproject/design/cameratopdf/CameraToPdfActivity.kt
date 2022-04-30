@@ -71,17 +71,18 @@ class CameraToPdfActivity : BaseActivity() {
         }
         binding.btCameraToPdfCapture.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                    requestPermissions(
-                        arrayOf(Manifest.permission.CAMERA),
-                        MY_CAMERA_PERMISSION_CODE
-                    )
-                } else {
+                if (checkAndRequestPermission())
+                    if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                        requestPermissions(
+                            arrayOf(Manifest.permission.CAMERA),
+                            MY_CAMERA_PERMISSION_CODE
+                        )
+                    } else {
 
-                    val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-                    someActivityResultLauncher.launch(intent)
+                        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                        someActivityResultLauncher.launch(intent)
 
-                }
+                    }
             }
         }
     }
