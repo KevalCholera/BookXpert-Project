@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Bookxpert Project</string>
+    <string name="important_message">Important Message:-</string>
+    <string name="act_id">Act ID</string>
+    <string name="act_name">Act Name</string>
+    <string name="amount">Amount</string>
+    <string name="total">Total</string>
+    <string name="task_2_camera_to_pdf">Task 2 - Camera to PDF</string>
+    <string name="task_1_amount">Task 1 - API Calling</string>
+    <string name="capture_picture">Capture Picture</string>
+    <string name="view_pdf">View Pdf</string>
+    <string name="download_pdf">Download PDF</string>
+    <string name="imageCapture">Image Capture</string>
+</resources>
